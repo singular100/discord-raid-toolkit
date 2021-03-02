@@ -29,7 +29,7 @@ async function deleteAllChannels(serverid, client_name, event) {
     })
   }
 }
-async function createChannelsLoop(serverid, channels_name, times_messsage_is_sent, channel_message, type, topic, nsfw, channel_cooldown, reason, times, client_name, event) {
+async function createChannelsLoop(serverid, channels_name, times_messsage_is_sent, channel_message, topic, nsfw, channel_cooldown, reason, times, client_name, event) {
   if(!client_name.guilds.cache.get(serverid)) {
     return console.log('Make sure the ID of the server you provided is VALID.')
   }
@@ -45,7 +45,7 @@ async function createChannelsLoop(serverid, channels_name, times_messsage_is_sen
         break;
       } else {
         client_name.guilds.cache.get(serverid).channels.create(channels_name, {
-        type: type,
+        type: 'text',
         topic: topic,
         nsfw: nsfw,
         rateLimitPerUser: channel_cooldown,
