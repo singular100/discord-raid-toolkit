@@ -100,3 +100,7 @@ UPDATE (0.0.10)
 
 UPDATE(0.0.11)
 - Updated README to match with 0.0.10 update
+
+UPDATE (0.2.0)
+- Improved package core
+
